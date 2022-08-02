@@ -25,7 +25,7 @@ function Register() {
     }
 
     const addproducts = async (req , res) => {
-        await axios.post("https://avinashsyoft.herokuapp.com/addproduct", inputval)
+        await axios.post("http://localhost:5000/addproduct", inputval)
         .then((dt) => {
             console.log("res", dt.data);
         })
@@ -50,7 +50,7 @@ function Register() {
         
                 <div>
                     <input 
-                        type="email" 
+                        type="number" 
                         name = "product_price"
                         placeholder="Product_price"
                         value = {inputval.product_price}
@@ -68,7 +68,8 @@ function Register() {
                     />
                 </div><br />
                 <div> 
-                    <textarea 
+                    <input
+                       type="text" 
                         placeholder="Description"
                         name="message"
                         value = {inputval.prod_desc}
