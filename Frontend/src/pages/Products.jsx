@@ -25,7 +25,7 @@ function Register() {
     }
 
     const addproducts = async (req , res) => {
-        await axios.post("http://localhost:2345/products/addproduct", inputval)
+        await axios.post("https://avinashsyoft.herokuapp.com/addproduct", inputval)
         .then((dt) => {
             console.log("res", dt.data);
         })

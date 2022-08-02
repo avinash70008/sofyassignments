@@ -20,14 +20,14 @@ function Register() {
     const handleChange = (e) => {
         const {name , value} = e.target;
         SetInputVal({...inputval, [name] : value})
-        // console.log(inputval)
+       
     };
 
     const handleSubmit = (e) => {
         e.preventDefault()
         SetInputErrors(validation(inputval))
         SetSubmit(true)
-        //console.log("obj", inputval)
+      
         register()
     }
 
